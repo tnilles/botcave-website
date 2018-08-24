@@ -10,7 +10,8 @@ body {
   background-size: cover;
   text-align: center;
   background-position-y: 100%;
-  min-height: 1000px;
+  min-height: 820px;
+  display: flex;
 }
 
 .mac-window {
@@ -25,10 +26,10 @@ h2.tagline {
   color: #fee242;
   font-size: 36px;
   text-shadow: 1px 1px 1px #000000ad;
-  margin: 30px auto;
   position: relative;
   width: auto;
   display: inline-block;
+  margin: 200px 80px;
 }
 
 h2.tagline:before {
@@ -63,10 +64,83 @@ h2.tagline:before {
   letter-spacing: 1px;
 }
 
+.bots ul {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: -40px;
+  font-size: 18px;
+  line-height: 31px;
+  text-align: justify;
+  letter-spacing: 1px;
+  padding-left: 250px;
+}
+
 footer {
   background: #666666;
   padding: 30px;
   text-align: right;
   color: white;
   font-weight: 300;
+}
+
+@media (max-width: 1200px) {
+  .conversation {
+    flex-direction: column;
+  }
+
+  h2.tagline {
+    margin: 10px;
+    line-height: 48px;
+  }
+
+  h2.tagline:before {
+    position: relative;
+    top: 45px;
+    font-size: 82px;
+    left: -30px;
+  }
+
+  .mac-window {
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 690px) {
+  .conversation {
+    padding: 0;
+    min-height: 750px;
+    background-position-x: -100px;
+  }
+
+  h2.tagline {
+    line-height: 28px;
+    font-size: 17px;
+  }
+
+  h2.tagline:before {
+    top: 25px;
+    font-size: 49px;
+    left: -17px;
+  }
+
+  .mac-window {
+    width: 100%!important;
+    height: 260px!important;
+  }
+
+  .mac-window header {
+    display: none;
+  }
+
+  .slack nav {
+    display: none;
+  }
+
+  .bots ul {
+    padding-left: 0;
+  }
+
+  .for-who {
+    min-height: 100px;
+  }
 }

@@ -358,6 +358,11 @@ thumb:after {
   border-radius: 5px!important;
 }
 
+.robot thumb {
+  background-image: url(https://media.licdn.com/dms/image/C4D03AQHbZN_5Sdz1Nw/profile-displayphoto-shrink_800_800/0?e=1540425600&v=beta&t=371z1fDBEWN6eJDpyUa2T0Uiy96plzF5DlBKz4_WDC0)!important;
+  border-radius: 5px!important;
+}
+
 .robot thumb:after {
   content: 'Charlotte';
 }
