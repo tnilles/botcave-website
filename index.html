@@ -73,55 +73,97 @@
                       <div class="messages" id="messages">
                         <form id="welcome-form" action="https://formspree.io/thierry@botcave.io" method="POST" cf-create-id="1534965232021">
                 					<fieldset>
-                						<label for="name">Hi there! What is your name?</label>
-                						<input required="" cf-questions="Hi there! What is your name? 😊" type="text" class="form-control" name="name" id="name" tabindex="-1">
+                						<label for="name">Hi there what’s your name?</label>
+                						<input required="" cf-questions="Hi there what’s your name? 😊" type="text" class="form-control" name="name" id="name" tabindex="-1">
                 					</fieldset>
 
                           <fieldset>
                 						<label for="name">Occupation</label>
-                						<input required="" cf-questions="Great to meet you, {previous-answer}! What do you do?|Awesome, {previous-answer}! And what do you do?" type="text" class="form-control" name="occupation" id="occupation" tabindex="-1">
+                						<input required="" cf-questions="Awesome! And what do you do?" type="text" class="form-control" name="occupation" id="occupation" tabindex="-1">
                 					</fieldset>
 
                           <fieldset>
                 						<label for="occupation">Interested in saving time?</label>
                 						<div class="radio">
                 						<label>
-                							<input cf-questions="Interested in saving time with your recurring tasks?" type="radio" name="interested-in-saving-time" id="interested-in-saving-time" value="Oh yes!" tabindex="-1">
-                							Oh yes!
+                							<input cf-questions="Wow, that’s terrific… You must be super busy all the time? Would you like to save some time?" type="radio" name="interested-in-saving-time" id="interested-in-saving-time" value="yes" tabindex="-1">
+                							Oh yes I do!
                 						</label>
                 						</div>
                 						<div class="radio">
                 						<label>
-                							<input type="radio" name="interested-in-saving-time" id="not-interested-in-saving-time" value="Not really" tabindex="-1">
-                							Not really
+                							<input type="radio" name="interested-in-saving-time" id="not-interested-in-saving-time" value="no" tabindex="-1">
+                              Nope, not interested
                 						</label>
                 						</div>
                 					</fieldset>
+
+                          <fieldset>
+                						<label for="to-be-pinged">Do you want to be pinged when our bots are out?</label>
+                						<div class="radio">
+                						<label>
+                							<input cf-conditional-interested-in-saving-time="yes" cf-questions="Cool, we can help! Our slackbots are designed to help you in your team routine! They will be available very soon! Are you interested in being pinged when we’re ready?" type="radio" name="to-be-pinged" id="to-be-pinged" value="yes" tabindex="-1">
+                							Absolutely !
+                						</label>
+                						</div>
+                						<div class="radio">
+                						<label>
+                							<input cf-conditional-interested-in-saving-time="yes" type="radio" name="to-be-pinged" id="not-to-be-pinged" value="no" tabindex="-1">
+                							Nooooo
+                						</label>
+                						</div>
+                					</fieldset>
+
+                          <fieldset>
+                						<label for="to-be-pinged2">Do you want to be pinged when our bots are out?</label>
+                						<div class="radio">
+                						<label>
+                							<input cf-conditional-interested-in-saving-time="no" cf-questions="Oh… Ok I guess you’re already optimized! Let us know if we can help you in the future :) Can we stay in touch? " type="radio" name="to-be-pinged2" id="to-be-pinged2" value="yes" tabindex="-1">
+                							Absolutely !
+                						</label>
+                						</div>
+                						<div class="radio">
+                						<label>
+                							<input cf-conditional-interested-in-saving-time="no" type="radio" name="to-be-pinged2" id="not-to-be-pinged" value="no" tabindex="-1">
+                							Nooooo
+                						</label>
+                						</div>
+                					</fieldset>
+
 
                           <fieldset>
                 						<label for="name">Email</label>
-                						<input required="" pattern=".+\@.+\..+" cf-error="E-mail not correct" cf-questions="Oh and by the way, what's your email address?" type="email" class="form-control" name="email" id="email" tabindex="-1">
+                						<input cf-conditional-to-be-pinged="yes" pattern=".+\@.+\..+" cf-error="E-mail not correct" cf-questions="Wonderful! Please write your email adsress so we can contact you later :)" type="email" class="form-control" name="email" id="email" tabindex="-1">
                 					</fieldset>
 
                           <fieldset>
-                						<label for="occupation">Do you want to be pinged when our bots are out?</label>
-                						<div class="radio">
-                						<label>
-                							<input cf-questions="Do you want to be pinged when our bots are out?" type="radio" name="to-be-pinged" id="to-be-pinged" value="Oh yes!" tabindex="-1">
-                							Sure, ping me!
-                						</label>
-                						</div>
-                						<div class="radio">
-                						<label>
-                							<input type="radio" name="to-be-pinged" id="not-to-be-pinged" value="Not really" tabindex="-1">
-                							No thank you!
-                						</label>
-                						</div>
+                						<label for="name">Sad ending</label>
+                						<input cf-conditional-to-be-pinged="no" cf-questions="¯\_(ツ)_/¯ Okay, we undestand it’s not the right time, if you need us, you’ll know where to find us :)" type="text" class="form-control" name="sadending" id="sadending" tabindex="-1">
                 					</fieldset>
+
+
+                          <fieldset>
+                						<label for="name">Email</label>
+                						<input cf-conditional-to-be-pinged2="yes" pattern=".+\@.+\..+" cf-error="E-mail not correct" cf-questions="Wonderful! Please write your email adsress so we can contact you later :)" type="email" class="form-control" name="email2" id="email2" tabindex="-1">
+                					</fieldset>
+
+                          <fieldset>
+                						<label for="name">Sad ending</label>
+                						<input cf-conditional-to-be-pinged2="no" cf-questions="¯\_(ツ)_/¯ Okay, we undestand it’s not the right time, if you need us, you’ll know where to find us :)" type="text" class="form-control" name="sadending2" id="sadending2" tabindex="-1">
+                					</fieldset>
+
 
                 					<fieldset style="display: none;">
                 						<label for="thats-all">Are you ok to send us this conversation?</label>
-                						<select cf-questions="Are you ok to send us this conversation?" name="submit-form" id="submit-form" class="form-control" tabindex="-1">
+                						<select cf-conditional-email=".+\@.+\..+" cf-questions="Are you OK to send us this conversation so we can contact you later?" name="submit-form" id="submit-form" class="form-control" tabindex="-1">
+                							<option></option>
+                							<option tabindex="-1">Yup</option>
+                						</select>
+                					</fieldset>
+
+                          <fieldset style="display: none;">
+                						<label for="thats-all">Are you ok to send us this conversation?</label>
+                						<select cf-conditional-email2=".+\@.+\..+" cf-questions="Are you OK to send us this conversation so we can contact you later?" name="submit-form2" id="submit-form2" class="form-control" tabindex="-1">
                 							<option></option>
                 							<option tabindex="-1">Yup</option>
                 						</select>
