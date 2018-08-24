@@ -1,0 +1,72 @@
+body {
+  background-color: rgb(246, 248, 250);
+  margin: 0;
+  font-family: Lato;
+}
+
+.conversation {
+  background: url(images/photos/IMG_20180823_083142.jpg);
+  padding: 30px;
+  background-size: cover;
+  text-align: center;
+  background-position-y: 100%;
+  min-height: 1000px;
+}
+
+.mac-window {
+  height: 420px!important;
+  width: 640px!important;
+  margin-right: 80px;
+  margin-left: auto;
+  text-align: left;
+}
+
+h2.tagline {
+  color: #fee242;
+  font-size: 36px;
+  text-shadow: 1px 1px 1px #000000ad;
+  margin: 30px auto;
+  position: relative;
+  width: auto;
+  display: inline-block;
+}
+
+h2.tagline:before {
+  content: '&';
+  position: absolute;
+  top: -5px;
+  font-size: 82px;
+  left: -70px;
+}
+
+.for-who {
+  text-align: center;
+}
+
+.for-who h1 {
+  color: #333333;
+  margin: 60px auto;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.bots {
+  padding: 0 30px;
+}
+
+.bots p {
+  max-width: 600px;
+  margin: 80px auto;
+  font-size: 18px;
+  line-height: 31px;
+  text-align: justify;
+  letter-spacing: 1px;
+}
+
+footer {
+  background: #666666;
+  padding: 30px;
+  text-align: right;
+  color: white;
+  font-weight: 300;
+}

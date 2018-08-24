@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Botcave</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- troisième-génération iPad avec haute-résolution Retina display: -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon144.png">
+        <!-- iPhone avec haute-résolution Retina display: -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon114.png">
+        <!-- première- et deuxième-génération iPad: -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon72.png">
+        <!-- non-Retina iPhone, iPod Touch, et Android 2.1+ devices: -->
+        <link rel="apple-touch-icon-precomposed" href="images/favicon72.png">
+        <!-- basic favicon -->
+        <link rel="shortcut icon" href="images/favicon.png">
+
+        <link href="https://fonts.googleapis.com/css?family=Coustard:400,900|Fontdiner+Swanky|Rakkas|Bilbo+Swash+Caps|Cookie|Dancing+Script|Montez|Roboto:400,500,600,700,800|Lato:300,400,500,600,700,800,900" rel="stylesheet">
+        <link rel="stylesheet" href="slack.css" media="screen">
+        <link rel="stylesheet" href="index.css" media="screen">
+    </head>
+    <body>
+
+        <nav>
+          <h1>
+            <img src="images/logo.png" alt="Botcave Logo" style="width: 250px; margin-left: 30px; margin-top: 10px;">
+          </h1>
+        </nav>
+
+        <div class="conversation">
+          <h2 class="tagline">UNCLUTTER YOUR ROUTINE<br>TAKE CARE OF YOUR TEAM</h2>
+
+          <div class="mac-window" style="height: 420px; width: auto;">
+              <header>
+                  <div class="close-btn"></div>
+                  <div class="minimize-btn"></div>
+                  <div class="maximize-btn"></div>
+              </header>
+
+              <div class="slack">
+                  <nav style="width: 185px;">
+                      <h1>ACME Inc.</h1>
+                      <div class="me">
+                          <div class="active-icon"></div>
+                          Michel
+                      </div>
+
+                      <section>
+                          <h2>CHANNELS</h2>
+                          <h3 class="active"><span class="hashtag">#</span> general</h3>
+                          <h3><span class="hashtag">#</span> random</h3>
+                          <h3><span class="hashtag">#</span> tech</h3>
+                          <h3><span class="hashtag">#</span> marketing</h3>
+                          <h3><span class="hashtag">#</span> product</h3>
+                      </section>
+
+                      <section style="margin-top: 15px;">
+                          <h2>DIRECT MESSAGES <span class="count">(2)</span> <span class="add-btn">+</span></h2>
+                          <h3><div class="active-icon"></div> alfred</h3>
+                          <h3><div class="active-icon"></div> jacques</h3>
+                          <h3><div class="active-icon"></div> mary</h3>
+                          <h3><div class="active-icon"></div> slackbot</h3>
+                      </section>
+                  </nav>
+
+                  <div class="content">
+                      <header>
+                          <h1>#general</h1>
+                      </header>
+
+                      <div class="messages" id="messages">
+                        <form id="welcome-form" action="https://formspree.io/thierry@botcave.io" method="POST" cf-create-id="1534965232021">
+                					<fieldset>
+                						<label for="name">Hi there! What is your name?</label>
+                						<input required="" cf-questions="Hi there! What is your name? 😊" type="text" class="form-control" name="name" id="name" tabindex="-1">
+                					</fieldset>
+
+                          <fieldset>
+                						<label for="name">Occupation</label>
+                						<input required="" cf-questions="Great to meet you, {previous-answer}! What do you do?|Awesome, {previous-answer}! And what do you do?" type="text" class="form-control" name="occupation" id="occupation" tabindex="-1">
+                					</fieldset>
+
+                          <fieldset>
+                						<label for="occupation">Interested in saving time?</label>
+                						<div class="radio">
+                						<label>
+                							<input cf-questions="Interested in saving time with your recurring tasks?" type="radio" name="interested-in-saving-time" id="interested-in-saving-time" value="Oh yes!" tabindex="-1">
+                							Oh yes!
+                						</label>
+                						</div>
+                						<div class="radio">
+                						<label>
+                							<input type="radio" name="interested-in-saving-time" id="not-interested-in-saving-time" value="Not really" tabindex="-1">
+                							Not really
+                						</label>
+                						</div>
+                					</fieldset>
+
+                          <fieldset>
+                						<label for="name">Email</label>
+                						<input required="" pattern=".+\@.+\..+" cf-error="E-mail not correct" cf-questions="Oh and by the way, what's your email address?" type="email" class="form-control" name="email" id="email" tabindex="-1">
+                					</fieldset>
+
+                          <fieldset>
+                						<label for="occupation">Do you want to be pinged when our bots are out?</label>
+                						<div class="radio">
+                						<label>
+                							<input cf-questions="Do you want to be pinged when our bots are out?" type="radio" name="to-be-pinged" id="to-be-pinged" value="Oh yes!" tabindex="-1">
+                							Sure, ping me!
+                						</label>
+                						</div>
+                						<div class="radio">
+                						<label>
+                							<input type="radio" name="to-be-pinged" id="not-to-be-pinged" value="Not really" tabindex="-1">
+                							No thank you!
+                						</label>
+                						</div>
+                					</fieldset>
+
+                					<fieldset style="display: none;">
+                						<label for="thats-all">Are you ok to send us this conversation?</label>
+                						<select cf-questions="Are you ok to send us this conversation?" name="submit-form" id="submit-form" class="form-control" tabindex="-1">
+                							<option></option>
+                							<option tabindex="-1">Yup</option>
+                						</select>
+                					</fieldset>
+
+                					<button type="submit" class="btn btn-default">Submit</button>
+                				</form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+
+        <div class="for-who">
+            <h1>
+                I'm <span class="who"></span>
+            </h1>
+        </div>
+
+        <div class="bots">
+          <p>Here are 3 bots on Slack who will improve your team life: Fairly dispatch tasks amongst everybody, centralize your contacts, set up recurring processes, don't forget birthdays anymore, centralize the needs, share good tips and more!</p>
+          <p>Meet <strong>Alfred</strong>, a janitor who won't bend your ear – <strong>JacquesBot</strong>, the human connector and <strong>Mrs. Mary Botpins</strong>, the collective reminder.</p>
+        </div>
+
+        <footer>
+            © Botcave 2018
+        </footer>
+
+        <script src="./node_modules/conversational-form/dist/conversational-form.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./node_modules/typed.js/lib/typed.min.js" charset="utf-8"></script>
+
+        <script type="text/javascript">
+        new cf.ConversationalForm({
+          // HTMLFormElement
+          formEl: document.getElementById('welcome-form')
+        });
+
+        setTimeout(() => {
+          $("#conversational-form").appendTo("#messages");
+        }, 1000);
+
+        let typed = new Typed('.who', {
+        	strings: [
+        		'an office manager',
+        		'a team manager',
+        		'a coworking space manager',
+        		'a busy human being'
+        	],
+        	typeSpeed: 70,
+        	backSpeed: 50,
+        	backDelay: 2000,
+        	loop: true
+        });
+        </script>
+
+        <script src="typed/lib/typed.min.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+</script>
+
+    </body>
+</html>
