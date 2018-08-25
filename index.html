@@ -41,7 +41,7 @@
 
               <div class="slack">
                   <nav style="width: 185px;">
-                      <h1>ACME Inc.</h1>
+                      <h1>Awesome team</h1>
                       <div class="me">
                           <div class="active-icon"></div>
                           Michel
@@ -86,7 +86,7 @@
                 						<label for="occupation">Interested in saving time?</label>
                 						<div class="radio">
                 						<label>
-                							<input cf-questions="Wow, that’s terrific! You must be super busy all the time! <br>Would you like to save some time?" type="radio" name="interested-in-saving-time" id="interested-in-saving-time" value="yes" tabindex="-1">
+                							<input cf-questions="Wow, that’s terrific! <br>You must be super busy all the time! 🤯 <br>Would you like to save some time?" type="radio" name="interested-in-saving-time" id="interested-in-saving-time" value="yes" tabindex="-1">
                 							Oh yes I do!
                 						</label>
                 						</div>
@@ -102,7 +102,7 @@
                 						<label for="to-be-pinged">Do you want to be pinged when our bots are out?</label>
                 						<div class="radio">
                 						<label>
-                							<input cf-conditional-interested-in-saving-time="yes" cf-questions="Cool, we can help! Our slackbots are designed to help you save time in your team routine! They will be available very soon! Are you interested in being pinged when we’re ready?" type="radio" name="to-be-pinged" id="to-be-pinged" value="yes" tabindex="-1">
+                							<input cf-conditional-interested-in-saving-time="yes" cf-questions="Cool, we can help!🤗 <br>Our slackbots are designed to help you save time in your team routine! <br>They will be available very soon! <br>Are you interested in being pinged when we’re ready?" type="radio" name="to-be-pinged" id="to-be-pinged" value="yes" tabindex="-1">
                 							Absolutely !
                 						</label>
                 						</div>
@@ -118,7 +118,7 @@
                 						<label for="to-be-pinged2">Do you want to be pinged when our bots are out?</label>
                 						<div class="radio">
                 						<label>
-                							<input cf-conditional-interested-in-saving-time="no" cf-questions="Oh… Ok I guess you’re already optimized! Let us know if we can help in the future :) <br>Can we stay in touch? " type="radio" name="to-be-pinged2" id="to-be-pinged2" value="yes" tabindex="-1">
+                							<input cf-conditional-interested-in-saving-time="no" cf-questions="Oh… Ok I guess you’re already optimized! Let us know if we can help in the future 😄 <br>Can we stay in touch? " type="radio" name="to-be-pinged2" id="to-be-pinged2" value="yes" tabindex="-1">
                 							Absolutely !
                 						</label>
                 						</div>
@@ -133,23 +133,23 @@
 
                           <fieldset>
                 						<label for="name">Email</label>
-                						<input cf-conditional-to-be-pinged="yes" pattern=".+\@.+\..+" cf-error="E-mail not correct" cf-questions="Wonderful! Can you write your email address below so we can contact you later? :)" type="email" class="form-control" name="email" id="email" tabindex="-1">
+                						<input cf-conditional-to-be-pinged="yes" pattern=".+\@.+\..+" cf-error="E-mail not correct" cf-questions="Wonderful! Can you write your email address below so we can contact you later? 😄" type="email" class="form-control" name="email" id="email" tabindex="-1">
                 					</fieldset>
 
                           <fieldset>
                 						<label for="name">Sad ending</label>
-                						<input cf-conditional-to-be-pinged="no" cf-questions="¯\_(ツ)_/¯ Okay, we undestand it’s not the right time, if you need us, you’ll know where to find us :)" type="text" class="form-control" name="sadending" id="sadending" tabindex="-1">
+                						<input cf-conditional-to-be-pinged="no" cf-questions="¯\_(ツ)_/¯ Okay, we undestand it’s not the right time, if you need us, you’ll know where to find us 😄	" type="text" class="form-control" name="sadending" id="sadending" tabindex="-1">
                 					</fieldset>
 
 
                           <fieldset>
                 						<label for="name">Email</label>
-                						<input cf-conditional-to-be-pinged2="yes" pattern=".+\@.+\..+" cf-error="E-mail not correct" cf-questions="Wonderful! Can you write your email address so we can contact you later? :)" type="email" class="form-control" name="email2" id="email2" tabindex="-1">
+                						<input cf-conditional-to-be-pinged2="yes" pattern=".+\@.+\..+" cf-error="E-mail not correct" cf-questions="Wonderful! Can you write your email address so we can contact you later? 😄" type="email" class="form-control" name="email2" id="email2" tabindex="-1">
                 					</fieldset>
 
                           <fieldset>
                 						<label for="name">Sad ending</label>
-                						<input cf-conditional-to-be-pinged2="no" cf-questions="¯\_(ツ)_/¯ Okay, we undestand it’s not the right time, if you need us, you’ll know where to find us :)" type="text" class="form-control" name="sadending2" id="sadending2" tabindex="-1">
+                						<input cf-conditional-to-be-pinged2="no" cf-questions="¯\_(ツ)_/¯ Okay, we undestand it’s not the right time, if you need us, you’ll know where to find us 😄" type="text" class="form-control" name="sadending2" id="sadending2" tabindex="-1">
                 					</fieldset>
 
 
@@ -157,15 +157,15 @@
                 						<label for="thats-all">Are you ok to send us this conversation?</label>
                 						<select cf-conditional-email=".+\@.+\..+" cf-questions="Are you OK to send us this conversation so we can contact you later?" name="submit-form" id="submit-form" class="form-control" tabindex="-1">
                 							<option></option>
-                							<option tabindex="-1">Yup</option>
+                							<option tabindex="-1">Yup 😎</option>
                 						</select>
                 					</fieldset>
 
                           <fieldset style="display: none;">
                 						<label for="thats-all">Are you ok to send us this conversation?</label>
-                						<select cf-conditional-email2=".+\@.+\..+" cf-questions="Promise, we'll only use your address to keep you posted with the bots ! We're not villains, I swear! <br>Is it OK with you?" name="submit-form2" id="submit-form2" class="form-control" tabindex="-1">
+                						<select cf-conditional-email2=".+\@.+\..+" cf-questions="Promise, we'll only use your address to keep you posted with the bots ! We're not villains, I swear! 😇<br>Is it OK with you?" name="submit-form2" id="submit-form2" class="form-control" tabindex="-1">
                 							<option></option>
-                							<option tabindex="-1">Yup B)</option>
+                							<option tabindex="-1">Yup 😎</option>
                 						</select>
                 					</fieldset>
 
