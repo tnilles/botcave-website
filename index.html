@@ -216,6 +216,9 @@
 
         setTimeout(() => {
           $("#conversational-form").appendTo("#messages");
+          setTimeout(() => {
+            window.scrollTo(0, 0);
+          }, 500);
         }, 1000);
 
         let typed = new Typed('.who', {
@@ -231,8 +234,6 @@
         	loop: true
         });
         </script>
-
-        <script src="typed/lib/typed.min.js" charset="utf-8"></script>
 
 <script type="text/javascript">
 </script>
