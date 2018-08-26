@@ -83,6 +83,13 @@ footer {
   font-weight: 300;
 }
 
+footer a,
+footer a:hover,
+footer a:active,
+footer a:visited {
+  color: #c0c0ff;
+}
+
 @media (max-width: 1200px) {
   .conversation {
     flex-direction: column;
