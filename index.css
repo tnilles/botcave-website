@@ -90,6 +90,36 @@ footer a:visited {
   color: #c0c0ff;
 }
 
+.delicious-cookies {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #e6e6e6a1;
+  padding: 5px;
+  z-index: 1000;
+}
+
+.delicious-cookies button {
+  border: none;
+  padding: 5px 20px;
+  font-size: 14px;
+  color: white;
+  margin: 0px 15px;
+}
+
+.delicious-cookies button:first-of-type {
+  background: #01ff4f;
+}
+
+.delicious-cookies button:nth-of-type(2) {
+  background: #b3b3b3;
+}
+
+.hidden {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .conversation {
     flex-direction: column;

@@ -20,6 +20,8 @@
         <link href="https://fonts.googleapis.com/css?family=Coustard:400,900|Fontdiner+Swanky|Rakkas|Bilbo+Swash+Caps|Cookie|Dancing+Script|Montez|Roboto:400,500,600,700,800|Lato:300,400,500,600,700,800,900" rel="stylesheet">
         <link rel="stylesheet" href="slack.css" media="screen">
         <link rel="stylesheet" href="index.css" media="screen">
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124605755-1"></script>
     </head>
     <body>
 
@@ -201,9 +203,15 @@
         </div>
 
         <footer>
-            © Botcave 2018, Company in the process of registration. 
+            © Botcave 2018, Company in the process of registration.
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Promise, we won't give you up.</a>
         </footer>
+
+        <div class="delicious-cookies hidden" id="delicious-cookies">
+          Botcave uses cookies in order to provide a better service and additional features.
+          <button type="button" name="button" onclick="acceptCookies()">Accept</button>
+          <button type="button" name="button" onclick="refuseCookies()">Refuse</button>
+        </div>
 
         <script src="./node_modules/conversational-form/dist/conversational-form.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -234,10 +242,30 @@
         	backDelay: 2000,
         	loop: true
         });
-        </script>
 
-<script type="text/javascript">
-</script>
+        if (localStorage.getItem('allowCookies') === 'true') {
+          acceptCookies();
+        } else {
+          document.getElementById('delicious-cookies').classList.remove('hidden');
+        }
+
+        function acceptCookies() {
+          localStorage.setItem('allowCookies', true);
+          setupAnalytics();
+          document.getElementById('delicious-cookies').classList.add('hidden');
+        }
+
+        function setupAnalytics() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-124605755-1');
+        }
+
+        function refuseCookies() {
+          document.getElementById('delicious-cookies').classList.add('hidden');
+        }
+        </script>
 
     </body>
 </html>
