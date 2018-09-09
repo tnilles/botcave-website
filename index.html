@@ -20,6 +20,9 @@
         <link href="https://fonts.googleapis.com/css?family=Coustard:400,900|Fontdiner+Swanky|Rakkas|Bilbo+Swash+Caps|Cookie|Dancing+Script|Montez|Roboto:400,500,600,700,800|Lato:300,400,500,600,700,800,900" rel="stylesheet">
         <link rel="stylesheet" href="slack.css" media="screen">
         <link rel="stylesheet" href="index.css" media="screen">
+        <link rel="stylesheet" href="node_modules/tingle.js/dist/tingle.min.css">
+
+        <script src="node_modules/tingle.js/dist/tingle.min.js"></script>
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124605755-1"></script>
     </head>
@@ -32,7 +35,13 @@
         </nav>
 
         <div class="conversation">
-          <h2 class="tagline">UNCLUTTER YOUR ROUTINE<br>TAKE CARE OF YOUR TEAM</h2>
+          <div>
+            <h2 class="tagline">UNCLUTTER YOUR ROUTINE<br>TAKE CARE OF YOUR TEAM</h2>
+
+            <a class="call-to-action">
+              Learn more about our bots
+            </a>
+          </div>
 
           <div class="mac-window" style="height: 420px; width: auto;">
               <header>
@@ -202,6 +211,41 @@
           <p>Meet <strong>Alfred</strong>, a janitor who won't bend your ear – <strong>JacquesBot</strong>, the human connector and <strong>Mrs. Mary Botpins</strong>, the collective reminder.</p>
         </div>
 
+        <p style="text-align: center;">
+          <a class="call-to-action" style="margin: 0 auto 100px;">
+            Learn more about our bots
+          </a>
+        </p>
+
+        <div id="modal-content" style="display: none;">
+          <h3>Want to know more about our bots?</h3>
+
+          <p>Just fill this little form and we'll come back to you when our bots are ready!</p>
+
+          <form action="https://formspree.io/hello@botcave.io" method="POST" class="modal-form">
+
+            <div class="">
+              <label for="occupation">What is your occupation?</label>
+              <select name="occupation" id="occupation" class="form-control">
+                <option>Office Manager</option>
+                <option>Coworking space Manager</option>
+                <option>Team Manager</option>
+                <option>Just a busy human being!</option>
+              </select>
+            </div>
+
+            <div class="">
+              <label for="email">And your email address?</label>
+              <input type="email" name="email">
+            </div>
+
+            <div class="">
+              <input type="submit" value="Keep me updated!">
+            </div>
+
+          </form>
+        </div>
+
         <footer>
             © Botcave 2018, Registered Company.
             Société immatriculée au RCS de Nanterre (842 138 349).
@@ -217,6 +261,8 @@
         <script src="./node_modules/conversational-form/dist/conversational-form.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="./node_modules/typed.js/lib/typed.min.js" charset="utf-8"></script>
+
+        <script src="main.js"></script>
 
         <script type="text/javascript">
         new cf.ConversationalForm({
