@@ -49,6 +49,8 @@ a.call-to-action {
   color: white;
   cursor: pointer;
   font-size: 19px;
+  position: relative;
+  z-index: 999;
 }
 
 .for-who {
