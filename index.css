@@ -156,9 +156,11 @@ footer a:visited {
   font-size: 16px;
   margin: 30px 0 0;
   padding: 10px 30px;
-  border: 1px solid #3c3c3c;
+  border: 1px solid #0e367d;
   cursor: pointer;
-  background: #eafff1;
+  background: #3667bf;
+  color: white;
+  border-radius: 40px;
 }
 
 @media (max-width: 1200px) {
