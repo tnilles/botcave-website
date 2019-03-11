@@ -224,3 +224,27 @@ footer a:visited {
     min-height: 100px;
   }
 }
+
+.add-to-slack {
+    font-family: 'Lato';
+    text-decoration: none;
+    color: #333333;
+    font-weight: 400;
+    background: white;
+    display: inline-block;
+    border-radius: 7px;
+    border: 1px solid #c7cacd;
+    padding: 10px 15px;
+    font-size: 24px;
+    transition: 0.1s ease-in-out background;
+}
+
+.add-to-slack img {
+    vertical-align: -12px;
+    margin-right: 10px;
+}
+
+.add-to-slack strong {
+    font-family: 'Lato';
+    font-weight: 600;
+}
